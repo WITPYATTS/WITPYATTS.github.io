@@ -1,6 +1,54 @@
 <html>
-    <head></head>
+    <head>
+        <style>
+            body {
+                height: 100vh;
+                margin: 0;
+                background-color: #222;
+                color: #ddd;
+            }
+
+            @media screen and (prefers-color-scheme: light) {
+                body {
+                    background-color: #ddd;
+                    color: #222;
+                }
+            }
+
+            @media print {
+                body {
+                    background-color: white;
+                    color: black;
+                }
+            }
+
+            /*
+            I don't know what I'm doing.
+            https://www.outsystems.com/blog/posts/css-vertical-align/
+            */
+            div#main {
+                -webkit-box-align: center;
+                   -ms-flex-align: center;
+                      align-items: center;
+                display: -ms-grid;
+                display: grid;
+                height: 100%;
+                justify-items: center;
+            }
+
+            div#content {
+                padding: 20px;
+                text-align: center;
+                font-family: sans-serif;
+                font-size: 4em;
+            }
+        </style>
+    </head>
     <body>
-        What is the problem you are trying to solve?
+        <div id="main">
+            <div id="content">
+                What is the problem you are trying to solve?
+            </div>
+        </div>
     </body>
 </html>
